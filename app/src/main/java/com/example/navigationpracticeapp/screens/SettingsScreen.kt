@@ -33,14 +33,14 @@ fun ScreenB(navController: NavHostController) {
         )
         Button(
             onClick = {
-                      navController.navigate("screenA")
+                      navController.navigate("Home")
                       },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.Yellow,
                 contentColor = Color.Black
             )
         ) {
-            Text("Back to Screen A")
+            Text("Back to Home Screen")
         }
     }
 }

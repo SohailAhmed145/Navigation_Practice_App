@@ -1,13 +1,24 @@
 package com.example.navigationpracticeapp.screens
 
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Settings
+import androidx.compose.ui.graphics.vector.ImageVector
+
 interface Destination{
     val route: String
+    val icon : ImageVector
+    val title: String
 }
 
-object ScreenA : Destination {
-    override val route = "screenA"
+object HomeScreen : Destination {
+    override val route = "Home"
+    override val icon = Icons.Filled.Home
+    override val title = "Home"
 }
 
-object ScreenB : Destination{
-    override val route = "screenB"
+object SettingsScreen : Destination{
+    override val route = "Settings"
+    override val icon = Icons.Filled.Settings
+    override val title = "Settings"
 }

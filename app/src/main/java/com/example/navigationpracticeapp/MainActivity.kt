@@ -10,11 +10,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.input.key.Key.Companion.Home
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.navigationpracticeapp.screens.HomeScreen
 import com.example.navigationpracticeapp.screens.ScreenA
 import com.example.navigationpracticeapp.screens.ScreenB
+import com.example.navigationpracticeapp.screens.SettingsScreen
 import com.example.navigationpracticeapp.ui.theme.NavigationPracticeAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -37,12 +40,17 @@ class MainActivity : ComponentActivity() {
 fun MyNavigation(){
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = ScreenA.route){
-        composable(ScreenA.route){
+    NavHost(navController = navController, startDestination = HomeScreen.route){
+        composable(HomeScreen.route){
             ScreenA(navController)
         }
-        composable(ScreenB.route){
+        composable(SettingsScreen.route){
             ScreenB(navController)
         }
     }
+}
+
+@Composable
+fun MyBottomNavigation(){
+    
 }

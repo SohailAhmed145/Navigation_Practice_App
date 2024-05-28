@@ -35,14 +35,14 @@ fun ScreenA(navController: NavHostController) {
         )
         Button(
             onClick = {
-                      navController.navigate("ScreenB")
+                      navController.navigate("Settings")
                       },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF2196F3),
                 contentColor = Color.Black
             )
             ) {
-            Text("Go to Screen B")
+            Text("Go to Settings Screen")
         }
     }
 }
