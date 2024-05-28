@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
-fun ScreenA(navController: NavHostController) {
+fun HomeScreen(navController: NavHostController) {
     Column (
         modifier = Modifier
             .fillMaxSize()
@@ -27,7 +27,7 @@ fun ScreenA(navController: NavHostController) {
         verticalArrangement = Arrangement.Center,
     ){
         Text(
-            text = "Screen",
+            text = "Home Screen",
             style = MaterialTheme.typography.bodyLarge,
             fontSize = 30.sp,
             color = Color(0xFF2196F3),
@@ -39,10 +39,10 @@ fun ScreenA(navController: NavHostController) {
                       },
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xFF2196F3),
-                contentColor = Color.Black
+                contentColor = Color(0xFFFFC107)
             )
             ) {
-            Text("Go to Settings Screen")
+            Text("Go to Settings Screen", fontSize = 20.sp)
         }
     }
 }
